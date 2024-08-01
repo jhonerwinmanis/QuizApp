@@ -78,7 +78,7 @@ const resultContainer = document.getElementById('result');
 const submitButton = document.getElementById('submit');
 const retryButton = document.getElementById('retry');
 const showAnswerButton = document.getElementById('showAnswer');
-
+const endQuizButton = document.getElementById('endQuiz');
 
 
 function shuffleArray(array) {
@@ -199,5 +199,6 @@ function showAnswer() {
 submitButton.addEventListener('click', checkAnswer);
 retryButton.addEventListener('click', retryQuiz);
 showAnswerButton.addEventListener('click', showAnswer);
+endQuizButton.addEventListener('click', displayResult);
 
 retryQuiz();

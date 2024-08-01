@@ -1,4 +1,4 @@
-const quizData = [
+let quizData = [
   {
     question: 'What is the capital of France?',
     options: ['Paris', 'London', 'Berlin', 'Madrid'],

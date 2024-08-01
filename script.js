@@ -65,7 +65,7 @@ const quizData = [
       answer: 'Lion',
     },
   ];
-  let  quizLength = 5;
+  let  quizLength = 10;
 
   const quizContainer = document.getElementById('quiz');
   const resultContainer = document.getElementById('result');

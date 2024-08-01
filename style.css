@@ -26,12 +26,14 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   max-width: 450px;
-  overflow-y:hidden;
+overflow-y:auto;
  
 }
 
+
 h1 {
   text-align: center;
+
 }
 
 .question {

@@ -173,9 +173,9 @@ function showAnswer() {
   for (let i = 0; i < incorrectAnswers.length; i++) {
     incorrectAnswersHtml += `
       <p>
-        <strong>Question:</strong> <i>${incorrectAnswers[i].question}</i><br>
-        <strong>Your Answer:</strong> <span style="color:blue"> ${incorrectAnswers[i].incorrectAnswer}</span><br>
-        <strong>Correct Answer:</strong> <span style="color:red">${incorrectAnswers[i].correctAnswer}</span>
+        <strong>Question:</strong> ${incorrectAnswers[i].question}<br>
+        <strong>Your Answer:</strong> <span style="color:red"> ${incorrectAnswers[i].incorrectAnswer}</span><br>
+        <strong>Correct Answer:</strong> <span style="color:green">${incorrectAnswers[i].correctAnswer}</span>
       </p>
     `;
   }

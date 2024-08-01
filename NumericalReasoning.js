@@ -1,16 +1,16 @@
 let Numerical_Reasoning = [
     {
-      question: '(2×1÷2), (4÷1×2), (6×1÷2), _____',
+      question: '(2x1÷2), (4÷1x2), (6x1÷2), _____',
       options: ['8', '16', '4', '32'],
       answer: '16',
     },
     {
-      question: '(15-8+3), 8, (4÷2×3), ____',
+      question: '(15-8+3), 8, (4÷2x3), ____',
       options: ['4', '3', '8', '2'],
       answer: '4',
     },
     {
-      question: 'Simplify: 33 1/3 % of 48 + 12 1⁄2 % of 96 – 44 4/9 % of 27',
+      question: 'Simplify: 33 1/3 % of 48 + 12 1/2 % of 96 - 44 4/9 % of 27',
       options: ['12', '16', '24', '48'],
       answer: '16',
     },
@@ -31,12 +31,12 @@ let Numerical_Reasoning = [
       answer: '250%',
     },
     {
-      question: ' 1 1⁄4 subtracted from its reciprocal is?',
-      options: ['–9/20', '0.45', '2.25', '9/20','–1/5'],
-      answer: '–9/20',
+      question: '1 1/4 subtracted from its reciprocal is?',
+      options: ['-9/20', '0.45', '2.25', '9/20','-1/5'],
+      answer: '-9/20',
     },
     {
-      question: 'What is the ratio of 1⁄4 to 3/5?',
+      question: 'What is the ratio of 1/4 to 3/5?',
       options: [
         '1 : 3',
         '3 : 20',
@@ -52,7 +52,7 @@ let Numerical_Reasoning = [
       answer: '2 √6',
     },
     {
-      question: 'A race car travelled for 2 1⁄2 hours with an average speed of 132 5/8 km per hour.Find the total distance it covered.',
+      question: 'A race car travelled for 2 1/2 hours with an average speed of 132 5/8 km per hour.Find the total distance it covered.',
       options: [
         '264 5/16 km',
         '331 9/16 km',
@@ -62,9 +62,9 @@ let Numerical_Reasoning = [
       answer: '331 9/16 km',
     },
     {
-      question: '990− (−2)2+ (−32) − (−4)2= ?',
-      options: ['−28', '−10', '−9', '30','none of the above'],
-      answer: '−28',
+      question: '990- (-2)2+ (-32)- (-4)2= ?',
+      options: ['-28', '-10', '-9', '30','none of the above'],
+      answer: '-28',
     },
     {
       question: 'A one fourth percent of a number is 25. What is the number?',
@@ -172,7 +172,7 @@ let Numerical_Reasoning = [
       answer: '5 scoops',
     },
     {
-      question: 'If 1 × 10 = 9, 2 × 10 = 18, 3 × 10 = 27, then what is 8 × 10 = ?',
+      question: 'If 1 x 10 = 9, 2 x 10 = 18, 3 x 10 = 27, then what is 8 x 10 = ?',
       options: ['36', '72', '78', '52'],
       answer: '72',
     },
@@ -197,7 +197,7 @@ let Numerical_Reasoning = [
       answer: '32',
     },
     {
-      question: 'PEMDAS: 10÷2×5−(12÷3×4)+1 =__?',
+      question: 'PEMDAS: 10÷2x5-(12÷3x4)+1 =__?',
       options: ['10', '1', '-1', '23','None of the above'],
       answer: '10',
     },
@@ -218,7 +218,7 @@ let Numerical_Reasoning = [
     },
     {
       question: 'Number Series: 1/12, 1/6, 1/4, 1/3, ____',
-      options: ['1', '1/3', '5/12', '1⁄2','None of the above'],
+      options: ['1', '1/3', '5/12', '1/2','None of the above'],
       answer: '5/12',
     },
     {

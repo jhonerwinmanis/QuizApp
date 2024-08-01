@@ -66,7 +66,9 @@ const quizData = [
   },
 ];
 let  quizLength = 10;
-let current_question;
+let score = 0;
+let incorrectAnswers = [];
+let currentQuestion=0;
 
 const quizContainer = document.getElementById('quiz');
 const resultContainer = document.getElementById('result');
@@ -74,9 +76,7 @@ const submitButton = document.getElementById('submit');
 const retryButton = document.getElementById('retry');
 const showAnswerButton = document.getElementById('showAnswer');
 
-let currentQuestion = 0;
-let score = 0;
-let incorrectAnswers = [];
+
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -87,20 +87,18 @@ function shuffleArray(array) {
 
 
 
+let current_question;
+
 function displayQuestion() {
-  ChangeToRandomQuestion();
-  const questionData = current_question;
-
-
 
   const questionElement = document.createElement('div');
   questionElement.className = 'question';
-  questionElement.innerHTML = questionData.question;
+  questionElement.innerHTML = quizData[currentQuestion].question;
 
   const optionsElement = document.createElement('div');
   optionsElement.className = 'options';
 
-  const shuffledOptions = [...questionData.options];
+  const shuffledOptions = [...quizData[currentQuestion].options];
   shuffleArray(shuffledOptions);
 
  
@@ -126,24 +124,19 @@ function displayQuestion() {
   quizContainer.appendChild(optionsElement);
 }
 
-function ChangeToRandomQuestion(){
-    let randomWholeNumber =( Math.floor(Math.random() * quizData.length) + 1)-1;
-    console.log(randomWholeNumber); // Outputs a random whole number between 1 and 10	  
-  current_question = quizData[randomWholeNumber];
-  quizData.splice(randomWholeNumber, 1);
-}
+
 
 function checkAnswer() {
   const selectedOption = document.querySelector('input[name="quiz"]:checked');
   if (selectedOption) {
     const answer = selectedOption.value;
-    if (answer === current_question.answer) {
+    if (answer === quizData[currentQuestion].answer) {
       score++;
     } else {
       incorrectAnswers.push({
-        question: current_question.question,
+        question: quizData[currentQuestion].question,
         incorrectAnswer: answer,
-        correctAnswer: current_question.answer,
+        correctAnswer: quizData[currentQuestion].answer,
       });
     }
     currentQuestion++;
@@ -168,6 +161,7 @@ function retryQuiz() {
   currentQuestion = 0;
   score = 0;
   incorrectAnswers = [];
+shuffleArray(quizData);
   quizContainer.style.display = 'block';
   submitButton.style.display = 'inline-block';
   retryButton.style.display = 'none';
@@ -203,4 +197,4 @@ submitButton.addEventListener('click', checkAnswer);
 retryButton.addEventListener('click', retryQuiz);
 showAnswerButton.addEventListener('click', showAnswer);
 
-displayQuestion();
+retryQuiz();

@@ -81,6 +81,8 @@ const retryButton = document.getElementById('retry');
 const showAnswerButton = document.getElementById('showAnswer');
 const endQuizButton = document.getElementById('endQuiz');
 
+const
+
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -166,7 +168,7 @@ function retryQuiz() {
   currentQuestion = 0;
   score = 0;
   incorrectAnswers = [];
-shuffleArray(quizData);
+  shuffleArray(quizData);
   quizContainer.style.display = 'block';
   endQuizButton.style.display = 'inline-block';
   submitButton.style.display = 'inline-block';

@@ -62,11 +62,6 @@ let Numerical_Reasoning = [
       answer: '331 9/16 km',
     },
     {
-      question: '990- (-2)2+ (-32)- (-4)2= ?',
-      options: ['-28', '-10', '-9', '30','none of the above'],
-      answer: '-28',
-    },
-    {
       question: 'A one fourth percent of a number is 25. What is the number?',
       options: ['100', '1,000', '10,000', '100,000'],
       answer: '10,000',

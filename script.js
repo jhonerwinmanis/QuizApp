@@ -68,7 +68,7 @@ let quizData = [
 
 quizData = Numerical_Reasoning;
 
-let  quizLength = 10;
+let  quizLength = quizData.length;
 let score = 0;
 let incorrectAnswers = [];
 let currentQuestion=0;

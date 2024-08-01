@@ -1,4 +1,4 @@
-const Numerical_Reasoning = [
+let Numerical_Reasoning = [
     {
       question: '(2×1÷2), (4÷1×2), (6×1÷2), _____',
       options: ['8', '16', '4', '32'],

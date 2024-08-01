@@ -72,6 +72,7 @@ let  quizLength = quizData.length;
 let score = 0;
 let incorrectAnswers = [];
 let currentQuestion=0;
+let solveItems  =0
 
 const quizContainer = document.getElementById('quiz');
 const resultContainer = document.getElementById('result');
@@ -158,7 +159,7 @@ function displayResult() {
   submitButton.style.display = 'none';
   retryButton.style.display = 'inline-block';
   showAnswerButton.style.display = 'inline-block';
-  resultContainer.innerHTML = `You scored ${score} out of ${quizLength}!`;
+  resultContainer.innerHTML = `You scored ${score} out of ${currentQuestion}!`;
 }
 
 function retryQuiz() {
@@ -194,7 +195,7 @@ function showAnswer() {
   }
 
   resultContainer.innerHTML = `
-    <p>You scored ${score} out of ${quizLength}!</p>
+    <p>You scored ${score} out of ${currentQuestion}!</p>
     ${incorrectAnswersHtml}
   `;
 }

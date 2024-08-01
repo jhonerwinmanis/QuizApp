@@ -65,6 +65,9 @@ const quizData = [
     answer: 'Lion',
   },
 ];
+
+quizData = Numerical_Reasoning;
+
 let  quizLength = 10;
 let score = 0;
 let incorrectAnswers = [];

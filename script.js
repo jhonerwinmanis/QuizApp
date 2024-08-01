@@ -73,7 +73,7 @@ let  quizLength = quizData.length;
 let score = 0;
 let incorrectAnswers = [];
 let currentQuestion=0;
-let solveItems  =0
+let solveItems  =0;
 
 const quizContainer = document.getElementById('quiz');
 const resultContainer = document.getElementById('result');

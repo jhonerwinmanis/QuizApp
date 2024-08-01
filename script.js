@@ -153,6 +153,7 @@ function checkAnswer() {
 }
 
 function displayResult() {
+  endQuizButton.style.display = 'none';
   quizContainer.style.display = 'none';
   submitButton.style.display = 'none';
   retryButton.style.display = 'inline-block';
@@ -166,6 +167,7 @@ function retryQuiz() {
   incorrectAnswers = [];
 shuffleArray(quizData);
   quizContainer.style.display = 'block';
+  endQuizButton.style.display = 'inline-block';
   submitButton.style.display = 'inline-block';
   retryButton.style.display = 'none';
   showAnswerButton.style.display = 'none';
@@ -174,6 +176,7 @@ shuffleArray(quizData);
 }
 
 function showAnswer() {
+  endQuizButton.style.display = 'none';
   quizContainer.style.display = 'none';
   submitButton.style.display = 'none';
   retryButton.style.display = 'inline-block';

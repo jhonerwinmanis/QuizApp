@@ -66,6 +66,7 @@ const quizData = [
   },
 ];
 let  quizLength = 10;
+let current_question;
 
 const quizContainer = document.getElementById('quiz');
 const resultContainer = document.getElementById('result');
@@ -84,8 +85,13 @@ function shuffleArray(array) {
   }
 }
 
+
+
 function displayQuestion() {
-  const questionData = quizData[currentQuestion];
+  ChangeToRandomQuestion();
+  const questionData = current_question;
+
+
 
   const questionElement = document.createElement('div');
   questionElement.className = 'question';
@@ -120,17 +126,24 @@ function displayQuestion() {
   quizContainer.appendChild(optionsElement);
 }
 
+function ChangeToRandomQuestion(){
+    let randomWholeNumber =( Math.floor(Math.random() * quizData.length) + 1)-1;
+    console.log(randomWholeNumber); // Outputs a random whole number between 1 and 10	  
+  current_question = quizData[randomWholeNumber];
+  quizData.splice(randomWholeNumber, 1);
+}
+
 function checkAnswer() {
   const selectedOption = document.querySelector('input[name="quiz"]:checked');
   if (selectedOption) {
     const answer = selectedOption.value;
-    if (answer === quizData[currentQuestion].answer) {
+    if (answer === current_question.answer) {
       score++;
     } else {
       incorrectAnswers.push({
-        question: quizData[currentQuestion].question,
+        question: current_question.question,
         incorrectAnswer: answer,
-        correctAnswer: quizData[currentQuestion].answer,
+        correctAnswer: current_question.answer,
       });
     }
     currentQuestion++;
@@ -176,12 +189,12 @@ function showAnswer() {
         <strong>Question:</strong> ${incorrectAnswers[i].question}<br>
         <strong>Your Answer:</strong> <span style="color:red"> ${incorrectAnswers[i].incorrectAnswer}</span><br>
         <strong>Correct Answer:</strong> <span style="color:green">${incorrectAnswers[i].correctAnswer}</span>
-      </p>
+      </p><br>
     `;
   }
 
   resultContainer.innerHTML = `
-    <p>You scored ${score} out of ${quizData.length}!</p>
+    <p>You scored ${score} out of ${quizLength}!</p>
     ${incorrectAnswersHtml}
   `;
 }

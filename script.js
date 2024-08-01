@@ -1,4 +1,4 @@
-let quizData = [
+let randomData = [
   {
     question: 'What is the capital of France?',
     options: ['Paris', 'London', 'Berlin', 'Madrid'],
@@ -66,6 +66,7 @@ let quizData = [
   },
 ];
 
+
 quizData = Numerical_Reasoning;
 
 let  quizLength = quizData.length;
@@ -81,7 +82,7 @@ const retryButton = document.getElementById('retry');
 const showAnswerButton = document.getElementById('showAnswer');
 const endQuizButton = document.getElementById('endQuiz');
 
-const
+const category =  document.getElementById('category');
 
 
 function shuffleArray(array) {
@@ -165,6 +166,29 @@ function displayResult() {
 }
 
 function retryQuiz() {
+  // console.log(category.value);
+
+  switch(category.value){
+    case "NUMERICAL REASONING":
+      quizData = Numerical_Reasoning;
+      break;
+      case  "SCIENCE":
+        quizData = Numerical_Reasoning;
+        break;
+      case  "MATH":
+        quizData = Numerical_Reasoning;
+        break;
+        case "RANDOM":
+          quizData = randomData;
+          break;
+        case "ENGLISH":
+          quizData = Numerical_Reasoning;
+      break;
+      default:
+     
+
+  }
+
   currentQuestion = 0;
   score = 0;
   incorrectAnswers = [];
